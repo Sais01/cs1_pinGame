@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitação de PIN</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <div class="container text-center">
+            <h2>Adivinhar o PIN</h2>
+            <div class="alert" role="alert" id="alertaStatus">
+                Desafie sua habilidade e precisão! Será que você consegue acertar o PIN e desbloquear a vitória?
+            </div>
+            <h3 id="indicadorRodada"></h3>
+
+            <form id="pinForm">
+                <div class="form-group">
+                    <label for="pinInput">Insira o PIN (0 - 100):</label>
+                    <input type="number" class="form-control" id="pinInput" placeholder="PIN" required min="0" max="100">
+                </div>
+        
+                <button type="submit" class="btn btn-primary">Verificar</button>
+            </form>
+
+            <br>
+            <h6 id="indicadorTentativas">Tentativas: 0</h6>
+            <h6 id="indicadorPrecisao">Precisão: 0%</h6>
+
+            <p>
+                <a class="btn btn-primary" data-toggle="collapse" href="#collapseHistoricoTentativas" id="botaoHistorico" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Histórico de tentativas
+                </a>
+            </p>
+            <div class="collapse" id="collapseHistoricoTentativas">
+                <div class="card card-body" id="historicoTentativas">
+                
+                </div>
+            </div>
+        </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
